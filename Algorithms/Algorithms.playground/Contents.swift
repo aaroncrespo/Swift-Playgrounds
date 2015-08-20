@@ -2,7 +2,7 @@
 
 import UIKit
 
-
+//Counting Sort
 let arr = [1,2,3,4,5]
 let k = arr.maxElement() //cheating
 
@@ -16,3 +16,17 @@ var sortedItems = Array<(String, Int)>(all)
 
 sortedItems.countingSort(K: 5) { $0.1 }
 print(sortedItems)
+
+
+// Permutations
+[1,2,3].permutations()
+
+
+let charsView = "fob".characters.permutations()
+
+//colapse view back into string
+let chars = charsView.reduce([String]()) { $0 + [String($1)] }
+chars
+
+
+["1", "2"].permutations()

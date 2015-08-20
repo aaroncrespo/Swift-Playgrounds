@@ -6,7 +6,7 @@ import Foundation
 public extension MutableCollectionType where Index == Int {
     mutating func countingSort(K K: Int, transform: ((Generator.Element) -> Int)) {
         // swift arrays are fixed in size and non sparse (repeating value of nil still requires K size)
-        // the only way to grow an array is append which does not lend does not let us build a histogram in value places
+        // the only way to grow an array is append which does  not let us build a histogram values in place
         //
         // Basically, we need to treat an Array<T> as a Dictionary<Int,T>
         // While maintaing ordering and avoiding all the  stuff like hashing and resizing that will add to run time.
